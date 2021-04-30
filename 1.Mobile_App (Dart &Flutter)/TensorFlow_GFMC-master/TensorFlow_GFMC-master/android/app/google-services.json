@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "58123193777",
+    "project_id": "gfmc-intelligent-systems",
+    "storage_bucket": "gfmc-intelligent-systems.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58123193777:android:47bd90407abfb94bcfc190",
+        "android_client_info": {
+          "package_name": "com.galibmuhammadshahriar.GFMC_Intelligent_Systems"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58123193777-g63ji5miqb0ejjea01jjo407ga9kq4rq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS8wKdZU8fIUpBZYcbmZlgFdduyKvhefU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58123193777-g63ji5miqb0ejjea01jjo407ga9kq4rq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
