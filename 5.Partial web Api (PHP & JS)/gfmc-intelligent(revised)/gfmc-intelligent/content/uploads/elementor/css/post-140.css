@@ -1,0 +1,20 @@
+.elementor-140 .elementor-element.elementor-element-460946a:not(.elementor-motion-effects-element-type-background), .elementor-140 .elementor-element.elementor-element-460946a > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:var( --e-global-color-627cff0 );}.elementor-140 .elementor-element.elementor-element-460946a{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-140 .elementor-element.elementor-element-460946a > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-140 .elementor-element.elementor-element-b6b79db{color:var( --e-global-color-3fa1378 );}.elementor-140 .elementor-element.elementor-element-b6b79db > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}:root{--page-title-display:none;}/* Start custom CSS for text-editor, class: .elementor-element-b6b79db */input[type="text"] {
+    background-color: #ff000000;
+    border-color: #FFBF00;
+}
+input.ap-form-submit-button {
+    border: #1F2937;
+    background-color: #1F2937;
+    color: #FFBF00;
+}
+
+
+input[type="email"] {
+    background-color: #ff000000;
+    border-color: #FFBF00;
+}
+
+.ap-form-field textarea {
+    background-color: #ff000000;
+    border-color: #FFBF00;
+}/* End custom CSS */

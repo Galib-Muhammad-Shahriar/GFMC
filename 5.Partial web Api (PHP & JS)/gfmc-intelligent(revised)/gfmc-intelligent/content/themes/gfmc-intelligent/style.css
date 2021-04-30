@@ -1,0 +1,33 @@
+/*
+Theme Name: GFMC Intelligent
+Theme URI: http://gfmc-intelligent.galibmuhammadshahriar.com
+Template: hello-elementor
+Author: Galib Muhammad Shahriar Himel
+Author URI: http://galibmuhammadshahriar.com/
+Version: 2.3.1.1616908226
+Updated: 2021-03-28 05:10:26
+
+*/
+
+
+
+.breed-block {
+    padding: 40px 0;
+}
+
+
+input#check_breed {
+    background: #ffbf00;
+    padding: 8px 80px;
+    border: 1px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+input#check_breed:hover {
+    background: #000;
+    color: #fff;
+}
