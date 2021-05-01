@@ -1,0 +1,1057 @@
+@startuml
+set namespaceSeparator ::
+
+class "GFMC_Intelligent::0.Provider::auth_provider.dart::AuthPro
+vider" {
+  -FirebaseAuth* _auth
+  -String* _userEmail
+  -dynamic _loggedInUser
+  +String* getUserEmail
+  +Future<bool*>* loginUser()
+  +Future<bool*>* RegisterUser()
+  +void getCurrentUser()
+  +bool* signOut()
+}
+
+"GFMC_Intelligent::0.Provider::auth_provider.dart::AuthProvider"
+ o-- "firebase_auth::firebase_auth.dart::FirebaseAuth*"
+"flutter::src::foundation::change_notifier.dart::ChangeNotifier"
+ <|-- "GFMC_Intelligent::0.Provider::auth_provider.dart::AuthPro
+vider"
+
+class "GFMC_Intelligent::1.Breed%20Identification::tensorflowDuc
+k.dart::TensorflowDuck" {
+  +_TensorflowDuckState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::1.Breed%20Identification::tensorflowDuck.dart::T
+ensorflowDuck"
+
+class "GFMC_Intelligent::1.Breed%20Identification::tensorflowDuc
+k.dart::_TensorflowDuckState" {
+  -List<dynamic>* _outputs
+  -File* _image
+  -bool* _loading
+  +void initState()
+  +dynamic loadModel()
+  +dynamic classifyImage()
+  +void dispose()
+  +dynamic pickImage()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::1.Breed%20Identification::tensorflowDuck.dart
+::_TensorflowDuckState" o-- "dart::io::File*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::1.Breed%20Identification::tensorflowDuck.dart::_Tensorflo
+wDuckState"
+
+class "GFMC_Intelligent::1.Breed%20Identification::tensorflowHen
+.dart::TensorflowHen" {
+  +_TensorflowHenState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::1.Breed%20Identification::tensorflowHen.dart::Te
+nsorflowHen"
+
+class "GFMC_Intelligent::1.Breed%20Identification::tensorflowHen
+.dart::_TensorflowHenState" {
+  -List<dynamic>* _outputs
+  -File* _image
+  -bool* _loading
+  +void initState()
+  +dynamic loadModel()
+  +dynamic classifyImage()
+  +void dispose()
+  +dynamic pickImage()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::1.Breed%20Identification::tensorflowHen.dart:
+:_TensorflowHenState" o-- "dart::io::File*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::1.Breed%20Identification::tensorflowHen.dart::_Tensorflow
+HenState"
+
+class "GFMC_Intelligent::1.Breed%20Identification::tensorflowTur
+key.dart::TensorflowTurkey" {
+  +_TensorflowTurkeyState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::1.Breed%20Identification::tensorflowTurkey.dart:
+:TensorflowTurkey"
+
+class "GFMC_Intelligent::1.Breed%20Identification::tensorflowTur
+key.dart::_TensorflowTurkeyState" {
+  -List<dynamic>* _outputs
+  -File* _image
+  -bool* _loading
+  +void initState()
+  +dynamic loadModel()
+  +dynamic classifyImage()
+  +void dispose()
+  +dynamic pickImage()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::1.Breed%20Identification::tensorflowTurkey.da
+rt::_TensorflowTurkeyState" o-- "dart::io::File*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::1.Breed%20Identification::tensorflowTurkey.dart::_Tensorf
+lowTurkeyState"
+
+class "GFMC_Intelligent::10.Blog::blog_post.dart::BlogPost" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::10.Blog::blog_post.dart::BlogPost"
+
+class "GFMC_Intelligent::10.Blog::blog_view.dart::BlogView" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::10.Blog::blog_view.dart::BlogView"
+
+class "GFMC_Intelligent::11.Donation::pages::existing-cards.dart
+::ExistingCardsPage" {
+  +ExistingCardsPageState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::11.Donation::pages::existing-cards.dart::Existin
+gCardsPage"
+
+class "GFMC_Intelligent::11.Donation::pages::existing-cards.dart
+::ExistingCardsPageState" {
+  +List<dynamic>* cards
+  +dynamic payViaExistingCard()
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::11.Donation::pages::existing-cards.dart::ExistingCardsPag
+eState"
+
+class "GFMC_Intelligent::11.Donation::pages::home.dart::HomePage
+Stripe" {
+  +HomePageStripeState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::11.Donation::pages::home.dart::HomePageStripe"
+
+class "GFMC_Intelligent::11.Donation::pages::home.dart::HomePage
+StripeState" {
+  +dynamic onItemPress()
+  +dynamic payViaNewCard()
+  +void initState()
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::11.Donation::pages::home.dart::HomePageStripeState"
+
+class "GFMC_Intelligent::11.Donation::paypal.dart::PayPal" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::11.Donation::paypal.dart::PayPal"
+
+class "GFMC_Intelligent::11.Donation::services::payment-service.
+dart::StripeTransactionResponse" {
+  +String* message
+  +bool* success
+}
+
+class "GFMC_Intelligent::11.Donation::services::payment-service.
+dart::StripeService" {
+  {static} +String* apiBase
+  {static} +String* paymentApiUrl
+  {static} +String* secret
+  {static} +Map<String*, String*>* headers
+  {static} +dynamic init()
+  {static} +Future<StripeTransactionResponse*>* payViaExistingCa
+rd()
+  {static} +Future<StripeTransactionResponse*>* payWithNewCard()
+  {static} +dynamic getPlatformExceptionErrorResult()
+  {static} +Future<Map<String*, dynamic>*>* createPaymentIntent(
+)
+}
+
+class "GFMC_Intelligent::11.Donation::stripe.dart::MenuViewDonat
+ion" {
+  +_MenuViewDonationState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::11.Donation::stripe.dart::MenuViewDonation"
+
+class "GFMC_Intelligent::11.Donation::stripe.dart::_MenuViewDona
+tionState" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::11.Donation::stripe.dart::_MenuViewDonationState"
+
+class "GFMC_Intelligent::13.Statistics::homepage.dart::HomePageC
+hart" {
+  +Widget* child
+  +_HomePageChartState* createState()
+}
+
+"GFMC_Intelligent::13.Statistics::homepage.dart::HomePageChart"
+o-- "flutter::src::widgets::framework.dart::Widget*"
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::13.Statistics::homepage.dart::HomePageChart"
+
+class "GFMC_Intelligent::13.Statistics::homepage.dart::_HomePage
+ChartState" {
+  -List<Series<Pollution*, String*>*>* _seriesData
+  -List<Series<Task*, String*>*>* _seriesPieData
+  -List<Series<Sales*, int*>*>* _seriesLineData
+  -dynamic _generateData()
+  +void initState()
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::13.Statistics::homepage.dart::_HomePageChartState"
+
+class "GFMC_Intelligent::13.Statistics::homepage.dart::Pollution
+" {
+  +String* place
+  +int* year
+  +int* quantity
+}
+
+class "GFMC_Intelligent::13.Statistics::homepage.dart::Task" {
+  +String* task
+  +double* taskvalue
+  +Color* colorval
+}
+
+"GFMC_Intelligent::13.Statistics::homepage.dart::Task" o-- "dart
+::ui::Color*"
+
+class "GFMC_Intelligent::13.Statistics::homepage.dart::Sales" {
+  +int* yearval
+  +int* salesval
+}
+
+class "GFMC_Intelligent::2.Disease%20Recognition::tensorflowDuck
+Disease.dart::TensorflowDuckDisease" {
+  +_TensorflowDuckDiseaseState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::2.Disease%20Recognition::tensorflowDuckDisease.d
+art::TensorflowDuckDisease"
+
+class "GFMC_Intelligent::2.Disease%20Recognition::tensorflowDuck
+Disease.dart::_TensorflowDuckDiseaseState" {
+  -List<dynamic>* _outputs
+  -File* _image
+  -bool* _loading
+  +void initState()
+  +dynamic loadModel()
+  +dynamic classifyImage()
+  +void dispose()
+  +dynamic pickImage()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::2.Disease%20Recognition::tensorflowDuckDiseas
+e.dart::_TensorflowDuckDiseaseState" o-- "dart::io::File*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::2.Disease%20Recognition::tensorflowDuckDisease.dart::_Ten
+sorflowDuckDiseaseState"
+
+class "GFMC_Intelligent::2.Disease%20Recognition::tensorflowHenD
+isease.dart::TensorflowHenDisease" {
+  +_TensorflowHenDiseaseState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::2.Disease%20Recognition::tensorflowHenDisease.da
+rt::TensorflowHenDisease"
+
+class "GFMC_Intelligent::2.Disease%20Recognition::tensorflowHenD
+isease.dart::_TensorflowHenDiseaseState" {
+  -List<dynamic>* _outputs
+  -File* _image
+  -bool* _loading
+  +void initState()
+  +dynamic loadModel()
+  +dynamic classifyImage()
+  +void dispose()
+  +dynamic pickImage()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::2.Disease%20Recognition::tensorflowHenDisease
+.dart::_TensorflowHenDiseaseState" o-- "dart::io::File*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::2.Disease%20Recognition::tensorflowHenDisease.dart::_Tens
+orflowHenDiseaseState"
+
+class "GFMC_Intelligent::2.Disease%20Recognition::tensorflowTurk
+eyDisease.dart::TensorflowTurkeyDisease" {
+  +_TensorflowTurkeyDiseaseState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::2.Disease%20Recognition::tensorflowTurkeyDisease
+.dart::TensorflowTurkeyDisease"
+
+class "GFMC_Intelligent::2.Disease%20Recognition::tensorflowTurk
+eyDisease.dart::_TensorflowTurkeyDiseaseState" {
+  -List<dynamic>* _outputs
+  -File* _image
+  -bool* _loading
+  +void initState()
+  +dynamic loadModel()
+  +dynamic classifyImage()
+  +void dispose()
+  +dynamic pickImage()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::2.Disease%20Recognition::tensorflowTurkeyDise
+ase.dart::_TensorflowTurkeyDiseaseState" o-- "dart::io::File*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::2.Disease%20Recognition::tensorflowTurkeyDisease.dart::_T
+ensorflowTurkeyDiseaseState"
+
+class "GFMC_Intelligent::3.Differentiation::RealTime.dart::Tflit
+eHome" {
+  +_TfliteHomeState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::3.Differentiation::RealTime.dart::TfliteHome"
+
+class "GFMC_Intelligent::3.Differentiation::RealTime.dart::_Tfli
+teHomeState" {
+  -String* _model
+  -File* _image
+  -double* _imageWidth
+  -double* _imageHeight
+  -bool* _busy
+  -List<dynamic>* _recognitions
+  +void initState()
+  +dynamic loadModel()
+  +dynamic selectFromImagePicker()
+  +dynamic predictImage()
+  +dynamic yolov2Tiny()
+  +dynamic ssdMobileNet()
+  +List<Widget*>* renderBoxes()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::3.Differentiation::RealTime.dart::_TfliteHome
+State" o-- "dart::io::File*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::3.Differentiation::RealTime.dart::_TfliteHomeState"
+
+class "GFMC_Intelligent::4.Cost%20Calculator::calculator_brain.d
+art::CalculatorBrain" {
+  +int* area
+  +int* humidity
+  +int* temperature
+  +int* level
+  -int* _cost
+  -int* _hen
+  +String* calculateBMI()
+  +String* getResult()
+  +String* getInterpretation()
+  +String* getInterpretation2()
+}
+
+class "GFMC_Intelligent::4.Cost%20Calculator::input_page.dart::I
+nputPage" {
+  +_InputPageState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::4.Cost%20Calculator::input_page.dart::InputPage"
+
+class "GFMC_Intelligent::4.Cost%20Calculator::input_page.dart::_
+InputPageState" {
+  +int* humidity
+  +int* temperature
+  +int* area
+  +int* level
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::4.Cost%20Calculator::input_page.dart::_InputPageState"
+
+class "GFMC_Intelligent::4.Cost%20Calculator::results_page.dart:
+:ResultsPage" {
+  +String* bmiResult
+  +String* resultText
+  +String* interpretation
+  +String* interpretation2
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::4.Cost%20Calculator::results_page.dart::Results
+Page"
+
+class "GFMC_Intelligent::5.Food%20Chart::food_chart.dart::FoodCh
+art" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::5.Food%20Chart::food_chart.dart::FoodChart"
+
+class "GFMC_Intelligent::6.Medicine%20Suggestion::medicine.dart:
+:Medicine" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::6.Medicine%20Suggestion::medicine.dart::Medicin
+e"
+
+class "GFMC_Intelligent::7.Infected%20Area::test_view.dart::MyAp
+pGoogle" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::7.Infected%20Area::test_view.dart::MyAppGoogle"
+
+class "GFMC_Intelligent::7.Infected%20Area::test_view.dart::MyHo
+mePage" {
+  +String* title
+  +_MyHomePageState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::7.Infected%20Area::test_view.dart::MyHomePage"
+
+class "GFMC_Intelligent::7.Infected%20Area::test_view.dart::_MyH
+omePageState" {
+  -int* _counter
+  +CameraPosition* cameraPosition
+  -GoogleMapController* _controller
+  +List<Marker*>* markersList
+  +void initState()
+  +void createMarker()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::7.Infected%20Area::test_view.dart::_MyHomePag
+eState" o-- "google_maps_flutter_platform_interface::src::types:
+:camera.dart::CameraPosition*"
+"GFMC_Intelligent::7.Infected%20Area::test_view.dart::_MyHomePag
+eState" o-- "google_maps_flutter::google_maps_flutter.dart::Goog
+leMapController*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::7.Infected%20Area::test_view.dart::_MyHomePageState"
+
+class "GFMC_Intelligent::bndbox.dart::BndBox" {
+  +List<dynamic>* results
+  +int* previewH
+  +int* previewW
+  +double* screenH
+  +double* screenW
+  +String* model
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::bndbox.dart::BndBox"
+
+class "GFMC_Intelligent::camera.dart::Camera" {
+  +List<CameraDescription*>* cameras
+  +void Function(List<dynamic>*, int*, int*)* setRecognitions
+  +String* model
+  +_CameraState* createState()
+}
+
+"GFMC_Intelligent::camera.dart::Camera" o-- "GFMC_Intelligent::c
+amera.dart::void Function(List<dynamic>*, int*, int*)*"
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::camera.dart::Camera"
+
+class "GFMC_Intelligent::camera.dart::_CameraState" {
+  +CameraController* controller
+  +bool* isDetecting
+  +void initState()
+  +void dispose()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::camera.dart::_CameraState" o-- "camera::camer
+a.dart::CameraController*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::camera.dart::_CameraState"
+
+class "GFMC_Intelligent::components::already_have_an_account_ach
+eck.dart::AlreadyHaveAnAccountCheck" {
+  +bool* login
+  +Function* press
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::components::already_have_an_account_acheck.dart
+::AlreadyHaveAnAccountCheck"
+
+class "GFMC_Intelligent::components::bottom_button.dart::BottomB
+utton" {
+  +Function* onTap
+  +String* buttonTitle
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::components::bottom_button.dart::BottomButton"
+
+class "GFMC_Intelligent::components::icon_content.dart::IconCont
+ent" {
+  +IconData* icon
+  +String* label
+  +Widget* build()
+}
+
+"GFMC_Intelligent::components::icon_content.dart::IconContent" o
+-- "flutter::src::widgets::icon_data.dart::IconData*"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::components::icon_content.dart::IconContent"
+
+class "GFMC_Intelligent::components::reusable_card.dart::Reusabl
+eCard" {
+  +Color* colour
+  +Widget* cardChild
+  +Function* onPress
+  +Widget* build()
+}
+
+"GFMC_Intelligent::components::reusable_card.dart::ReusableCard"
+ o-- "dart::ui::Color*"
+"GFMC_Intelligent::components::reusable_card.dart::ReusableCard"
+ o-- "flutter::src::widgets::framework.dart::Widget*"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::components::reusable_card.dart::ReusableCard"
+
+class "GFMC_Intelligent::components::reuseable_drawer.dart::ReUs
+eableDrawer" {
+  +_ReUseableDrawerState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::components::reuseable_drawer.dart::ReUseableDraw
+er"
+
+class "GFMC_Intelligent::components::reuseable_drawer.dart::_ReU
+seableDrawerState" {
+  -FirebaseUser* _loggedInUser
+  -FirebaseAuth* _auth
+  +void initState()
+  +void getCurrentUser()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::components::reuseable_drawer.dart::_ReUseable
+DrawerState" o-- "firebase_auth::firebase_auth.dart::FirebaseUse
+r*"
+"GFMC_Intelligent::components::reuseable_drawer.dart::_ReUseable
+DrawerState" o-- "firebase_auth::firebase_auth.dart::FirebaseAut
+h*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::components::reuseable_drawer.dart::_ReUseableDrawerState"
+
+class "GFMC_Intelligent::components::rounded_button.dart::Rounde
+dButton" {
+  +String* text
+  +Function* press
+  +Color* color
+  +Color* textColor
+  +Widget* build()
+}
+
+"GFMC_Intelligent::components::rounded_button.dart::RoundedButto
+n" o-- "dart::ui::Color*"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::components::rounded_button.dart::RoundedButton"
+
+class "GFMC_Intelligent::components::rounded_button2.dart::Round
+edButton" {
+  +Color* colour
+  +String* title
+  +Function* onPressed
+  +Widget* build()
+}
+
+"GFMC_Intelligent::components::rounded_button2.dart::RoundedButt
+on" o-- "dart::ui::Color*"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::components::rounded_button2.dart::RoundedButton
+"
+
+class "GFMC_Intelligent::components::rounded_input_field.dart::R
+oundedInputField" {
+  +String* hintText
+  +IconData* icon
+  +void Function(String*)* onChanged
+  +Function* onSave
+  +Widget* build()
+}
+
+"GFMC_Intelligent::components::rounded_input_field.dart::Rounded
+InputField" o-- "flutter::src::widgets::icon_data.dart::IconData
+*"
+"GFMC_Intelligent::components::rounded_input_field.dart::Rounded
+InputField" o-- "flutter::src::foundation::basic_types.dart::voi
+d Function(String*)*"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::components::rounded_input_field.dart::RoundedIn
+putField"
+
+class "GFMC_Intelligent::components::rounded_password_field.dart
+::RoundedPasswordField" {
+  +void Function(String*)* onChanged
+  +Function* onSaved
+  +Widget* build()
+}
+
+"GFMC_Intelligent::components::rounded_password_field.dart::Roun
+dedPasswordField" o-- "flutter::src::foundation::basic_types.dar
+t::void Function(String*)*"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::components::rounded_password_field.dart::Rounde
+dPasswordField"
+
+class "GFMC_Intelligent::components::round_icon_button.dart::Rou
+ndIconButton" {
+  +IconData* icon
+  +Function* onPressed
+  +Widget* build()
+}
+
+"GFMC_Intelligent::components::round_icon_button.dart::RoundIcon
+Button" o-- "flutter::src::widgets::icon_data.dart::IconData*"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::components::round_icon_button.dart::RoundIconBu
+tton"
+
+class "GFMC_Intelligent::components::text_field_container.dart::
+TextFieldContainer" {
+  +Widget* child
+  +Widget* build()
+}
+
+"GFMC_Intelligent::components::text_field_container.dart::TextFi
+eldContainer" o-- "flutter::src::widgets::framework.dart::Widget
+*"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::components::text_field_container.dart::TextFiel
+dContainer"
+
+class "GFMC_Intelligent::home.dart::HomePageCamera" {
+  +List<CameraDescription*>* cameras
+  +_HomePageCameraState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::home.dart::HomePageCamera"
+
+class "GFMC_Intelligent::home.dart::_HomePageCameraState" {
+  -List<dynamic>* _recognitions
+  -int* _imageHeight
+  -int* _imageWidth
+  -String* _model
+  +void initState()
+  +dynamic loadModel()
+  +dynamic onSelect()
+  +dynamic setRecognitions()
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::home.dart::_HomePageCameraState"
+
+class "GFMC_Intelligent::main.dart::MyApp" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::main.dart::MyApp"
+
+class "GFMC_Intelligent::main2.dart::MyCameraApp" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::main2.dart::MyCameraApp"
+
+class "GFMC_Intelligent::Menu.dart::MenuView" {
+  +_MenuViewState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Menu.dart::MenuView"
+
+class "GFMC_Intelligent::Menu.dart::_MenuViewState" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Menu.dart::_MenuViewState"
+
+class "GFMC_Intelligent::Menu_Online.dart::MenuOnlineView" {
+  +_MenuOnlineViewState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Menu_Online.dart::MenuOnlineView"
+
+class "GFMC_Intelligent::Menu_Online.dart::_MenuOnlineViewState"
+ {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Menu_Online.dart::_MenuOnlineViewState"
+
+class "GFMC_Intelligent::Menu_Secondary_Breed.dart::MenuSecondar
+yBreedView" {
+  +_MenuSecondaryBreedViewState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Menu_Secondary_Breed.dart::MenuSecondaryBreedVie
+w"
+
+class "GFMC_Intelligent::Menu_Secondary_Breed.dart::_MenuSeconda
+ryBreedViewState" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Menu_Secondary_Breed.dart::_MenuSecondaryBreedViewState"
+
+class "GFMC_Intelligent::Menu_Secondary_Disease.dart::MenuSecond
+aryDiseaseView" {
+  +_MenuSecondaryDiseaseViewState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Menu_Secondary_Disease.dart::MenuSecondaryDiseas
+eView"
+
+class "GFMC_Intelligent::Menu_Secondary_Disease.dart::_MenuSecon
+daryDiseaseViewState" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Menu_Secondary_Disease.dart::_MenuSecondaryDiseaseViewSta
+te"
+
+class "GFMC_Intelligent::Screens::chat_screen.dart::ChatScreen2"
+ {
+  {static} +String* id
+  +_ChatScreen2State* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Screens::chat_screen.dart::ChatScreen2"
+
+class "GFMC_Intelligent::Screens::chat_screen.dart::_ChatScreen2
+State" {
+  +TextEditingController* messageTextController
+  -FirebaseAuth* _auth
+  +String* messageText
+  +void initState()
+  +void getCurrentUser()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::Screens::chat_screen.dart::_ChatScreen2State"
+ o-- "flutter::src::widgets::editable_text.dart::TextEditingCont
+roller*"
+"GFMC_Intelligent::Screens::chat_screen.dart::_ChatScreen2State"
+ o-- "firebase_auth::firebase_auth.dart::FirebaseAuth*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Screens::chat_screen.dart::_ChatScreen2State"
+
+class "GFMC_Intelligent::Screens::chat_screen.dart::MessagesStre
+am" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::Screens::chat_screen.dart::MessagesStream"
+
+class "GFMC_Intelligent::Screens::chat_screen.dart::MessageBubbl
+e" {
+  +String* sender
+  +String* text
+  +bool* isMe
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::Screens::chat_screen.dart::MessageBubble"
+
+class "GFMC_Intelligent::Screens::Login::components::background.
+dart::Background" {
+  +Widget* child
+  +Widget* build()
+}
+
+"GFMC_Intelligent::Screens::Login::components::background.dart::
+Background" o-- "flutter::src::widgets::framework.dart::Widget*"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::Screens::Login::components::background.dart::Ba
+ckground"
+
+class "GFMC_Intelligent::Screens::Login::components::body.dart::
+LoginScreen3" {
+  {static} +String* id
+  +_LoginScreen3State* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Screens::Login::components::body.dart::LoginScre
+en3"
+
+class "GFMC_Intelligent::Screens::Login::components::body.dart::
+_LoginScreen3State" {
+  +bool* showSpinner
+  -FirebaseAuth* _auth
+  +String* email
+  +String* password
+  +Widget* build()
+}
+
+"GFMC_Intelligent::Screens::Login::components::body.dart::_Login
+Screen3State" o-- "firebase_auth::firebase_auth.dart::FirebaseAu
+th*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Screens::Login::components::body.dart::_LoginScreen3State
+"
+
+class "GFMC_Intelligent::Screens::Login::login_screen.dart::Logi
+nScreen" {
+  {static} +String* viewName
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::Screens::Login::login_screen.dart::LoginScreen"
+
+class "GFMC_Intelligent::Screens::login_screen.dart::LoginScreen
+2" {
+  {static} +String* id
+  +_LoginScreen2State* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Screens::login_screen.dart::LoginScreen2"
+
+class "GFMC_Intelligent::Screens::login_screen.dart::_LoginScree
+n2State" {
+  +bool* showSpinner
+  -FirebaseAuth* _auth
+  +String* email
+  +String* password
+  +Widget* build()
+}
+
+"GFMC_Intelligent::Screens::login_screen.dart::_LoginScreen2Stat
+e" o-- "firebase_auth::firebase_auth.dart::FirebaseAuth*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Screens::login_screen.dart::_LoginScreen2State"
+
+class "GFMC_Intelligent::Screens::registration_screen.dart::Regi
+strationScreen2" {
+  {static} +String* id
+  +_RegistrationScreen2State* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Screens::registration_screen.dart::RegistrationS
+creen2"
+
+class "GFMC_Intelligent::Screens::registration_screen.dart::_Reg
+istrationScreen2State" {
+  -FirebaseAuth* _auth
+  +bool* showSpinner
+  +String* email
+  +String* password
+  +Widget* build()
+}
+
+"GFMC_Intelligent::Screens::registration_screen.dart::_Registrat
+ionScreen2State" o-- "firebase_auth::firebase_auth.dart::Firebas
+eAuth*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Screens::registration_screen.dart::_RegistrationScreen2St
+ate"
+
+class "GFMC_Intelligent::Screens::Signup::components::background
+.dart::Background" {
+  +Widget* child
+  +Widget* build()
+}
+
+"GFMC_Intelligent::Screens::Signup::components::background.dart:
+:Background" o-- "flutter::src::widgets::framework.dart::Widget*
+"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::Screens::Signup::components::background.dart::B
+ackground"
+
+class "GFMC_Intelligent::Screens::Signup::components::body.dart:
+:SignUpScreen4" {
+  {static} +String* id
+  +_SignUpScreen4State* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Screens::Signup::components::body.dart::SignUpSc
+reen4"
+
+class "GFMC_Intelligent::Screens::Signup::components::body.dart:
+:_SignUpScreen4State" {
+  -FirebaseAuth* _auth
+  +bool* showSpinner
+  +String* email
+  +String* password
+  +Widget* build()
+}
+
+"GFMC_Intelligent::Screens::Signup::components::body.dart::_Sign
+UpScreen4State" o-- "firebase_auth::firebase_auth.dart::Firebase
+Auth*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Screens::Signup::components::body.dart::_SignUpScreen4Sta
+te"
+
+class "GFMC_Intelligent::Screens::Signup::signup_screen.dart::Si
+gnUpScreen" {
+  {static} +String* viewName
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::Screens::Signup::signup_screen.dart::SignUpScre
+en"
+
+class "GFMC_Intelligent::Screens::Welcome::components::backgroun
+d.dart::Background" {
+  +Widget* child
+  +Widget* build()
+}
+
+"GFMC_Intelligent::Screens::Welcome::components::background.dart
+::Background" o-- "flutter::src::widgets::framework.dart::Widget
+*"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::Screens::Welcome::components::background.dart::
+Background"
+
+class "GFMC_Intelligent::Screens::Welcome::components::body.dart
+::WelcomeScreen5" {
+  {static} +String* id
+  +_WelcomeScreen5State* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Screens::Welcome::components::body.dart::Welcome
+Screen5"
+
+class "GFMC_Intelligent::Screens::Welcome::components::body.dart
+::_WelcomeScreen5State" {
+  +AnimationController* controller
+  +Animation<dynamic>* animation
+  +void initState()
+  +void dispose()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::Screens::Welcome::components::body.dart::_Wel
+comeScreen5State" o-- "flutter::src::animation::animation_contro
+ller.dart::AnimationController*"
+"GFMC_Intelligent::Screens::Welcome::components::body.dart::_Wel
+comeScreen5State" o-- "flutter::src::animation::animation.dart::
+Animation<dynamic>*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Screens::Welcome::components::body.dart::_WelcomeScreen5S
+tate"
+"flutter::src::widgets::ticker_provider.dart::SingleTickerProvid
+erStateMixin" <|-- "GFMC_Intelligent::Screens::Welcome::componen
+ts::body.dart::_WelcomeScreen5State"
+
+class "GFMC_Intelligent::Screens::Welcome::welcome_screen.dart::
+WelcomeScreen" {
+  {static} +String* viewName
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "G
+FMC_Intelligent::Screens::Welcome::welcome_screen.dart::WelcomeS
+creen"
+
+class "GFMC_Intelligent::Screens::welcome_screen.dart::WelcomeSc
+reen2" {
+  {static} +String* id
+  +_WelcomeScreen2State* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Screens::welcome_screen.dart::WelcomeScreen2"
+
+class "GFMC_Intelligent::Screens::welcome_screen.dart::_WelcomeS
+creen2State" {
+  +AnimationController* controller
+  +Animation<dynamic>* animation
+  +void initState()
+  +void dispose()
+  +Widget* build()
+}
+
+"GFMC_Intelligent::Screens::welcome_screen.dart::_WelcomeScreen2
+State" o-- "flutter::src::animation::animation_controller.dart::
+AnimationController*"
+"GFMC_Intelligent::Screens::welcome_screen.dart::_WelcomeScreen2
+State" o-- "flutter::src::animation::animation.dart::Animation<d
+ynamic>*"
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Screens::welcome_screen.dart::_WelcomeScreen2State"
+"flutter::src::widgets::ticker_provider.dart::SingleTickerProvid
+erStateMixin" <|-- "GFMC_Intelligent::Screens::welcome_screen.da
+rt::_WelcomeScreen2State"
+
+class "GFMC_Intelligent::Start_app.dart::StartView" {
+  {static} +String* viewName
+  +_StartViewState* createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "GF
+MC_Intelligent::Start_app.dart::StartView"
+
+class "GFMC_Intelligent::Start_app.dart::_StartViewState" {
+  +Widget* build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "GFMC_Intell
+igent::Start_app.dart::_StartViewState"
+
+
+@enduml
